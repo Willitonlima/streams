@@ -2,6 +2,31 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class FiltroPessoa {
+
+    public List<Pessoa> filtrarMulheres(
+            List<Pessoa> pessoas
+    ){
+
+        return pessoas.stream()
+
+                .filter(
+                        p ->
+                                p.getSexo()
+                                .equalsIgnoreCase("F")
+                )
+
+                .collect(
+                        Collectors.toList()
+                );
+
+    }
+
+}
+
 
 public class Main {
 
